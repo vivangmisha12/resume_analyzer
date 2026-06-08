@@ -1,98 +1,113 @@
-import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { FiCheck, FiArrowRight, FiUpload, FiBarChart2, FiZap, FiShield, FiLinkedin, FiGithub, FiTwitter } from 'react-icons/fi'
+import { FiCheck, FiArrowRight, FiFileText, FiTarget, FiLock, FiLayers, FiLinkedin, FiGithub, FiTwitter } from 'react-icons/fi'
 import '../styles/home.css'
 
 export default function Home() {
   const navigate = useNavigate()
+
   const features = [
     {
-      icon: <FiZap />,
-      title: 'AI-Powered Analysis',
-      description: 'Advanced AI algorithms analyze your resume instantly and provide actionable insights.'
+      icon: <FiTarget />,
+      title: 'Precision Parsing',
+      description: 'Our engine extracts and evaluates your professional experience exactly how enterprise ATS systems do.'
     },
     {
-      icon: <FiBarChart2 />,
-      title: 'Detailed Scoring',
-      description: 'Get comprehensive scores across multiple dimensions with visual breakdowns.'
+      icon: <FiLayers />,
+      title: 'Structural Analysis',
+      description: 'Get immediate feedback on formatting, keyword density, and structural integrity.'
     },
     {
-      icon: <FiShield />,
-      title: 'Secure & Private',
-      description: 'Your data is encrypted and never shared. We prioritize your privacy.'
+      icon: <FiLock />,
+      title: 'Enterprise Security',
+      description: 'Your career data remains strictly confidential with end-to-end encryption.'
     },
     {
-      icon: <FiUpload />,
-      title: 'Easy Upload',
-      description: 'Drag and drop your resume in any format. Supported: PDF, DOC, DOCX.'
+      icon: <FiFileText />,
+      title: 'Universal Compatibility',
+      description: 'Seamlessly process complex PDFs and DOCX files without losing context.'
     }
   ]
 
   const steps = [
     {
       number: '01',
-      title: 'Upload Your Resume',
-      description: 'Simply drag and drop or click to upload your resume file.'
+      title: 'Upload Document',
+      description: 'Securely upload your current resume in PDF or Word format.'
     },
     {
       number: '02',
-      title: 'AI Analysis Runs',
-      description: 'Our AI analyzes your resume across multiple criteria in seconds.'
+      title: 'System Evaluation',
+      description: 'Our parser scans your document against thousands of successful industry resumes.'
     },
     {
       number: '03',
-      title: 'Get Insights',
-      description: 'Receive detailed feedback with suggestions to improve your resume.'
-    },
-    {
-      number: '04',
-      title: 'Track Progress',
-      description: 'Monitor improvements over time with our history feature.'
+      title: 'Actionable Report',
+      description: 'Receive a detailed breakdown of strengths, weaknesses, and missing keywords.'
     }
   ]
 
   return (
-    <div className="home">
+    <div className="home-premium">
       {/* Hero Section */}
-      <section className="hero">
-        <div className="hero-content">
-          <div className="hero-badge">🎯 AI-Powered Resume Analysis</div>
-          <h1 className="hero-title">
-            Optimize Your Resume with <span className="highlight">AI Intelligence</span>
+      <section className="hero-premium">
+        <div className="hero-content-premium">
+          <div className="hero-overline">Resume Intelligence Platform</div>
+          <h1 className="hero-title-premium">
+            Craft a Resume That<br/>Opens Doors.
           </h1>
-          <p className="hero-subtitle">
-            Get instant, actionable feedback to make your resume stand out. Our AI analyzes every aspect and helps you land more interviews.
+          <p className="hero-subtitle-premium">
+            Get actionable, data-driven feedback on your resume. Our parsing engine evaluates your document against industry-standard ATS criteria to help you land the interview.
           </p>
-          <div className="hero-buttons">
-            <button className="btn-primary" onClick={() => navigate('/register')}>
-              Get Started Free <FiArrowRight />
+          <div className="hero-actions-premium">
+            <button className="btn-solid" onClick={() => navigate('/register')}>
+              Start Free Analysis <FiArrowRight />
             </button>
-            <button className="btn-secondary" onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}>
-              Learn More
+            <button className="btn-outline" onClick={() => document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' })}>
+              Explore Platform
             </button>
           </div>
-          <div className="hero-stats">
-            <div className="stat">
-              <p className="stat-number">10K+</p>
-              <p className="stat-label">Resumes Analyzed</p>
+          <div className="hero-metrics">
+            <div className="metric">
+              <span className="metric-value">10k+</span>
+              <span className="metric-label">Professionals</span>
             </div>
-            <div className="stat">
-              <p className="stat-number">92%</p>
-              <p className="stat-label">Success Rate</p>
+            <div className="metric-divider"></div>
+            <div className="metric">
+              <span className="metric-value">92%</span>
+              <span className="metric-label">Interview Rate</span>
             </div>
-            <div className="stat">
-              <p className="stat-number">24/7</p>
-              <p className="stat-label">Available</p>
+            <div className="metric-divider"></div>
+            <div className="metric">
+              <span className="metric-value">Enterprise</span>
+              <span className="metric-label">Grade Parsing</span>
             </div>
           </div>
         </div>
-        <div className="hero-visual">
-          <div className="hero-image-box">
-            <div className="hero-card">
-              <div className="card-header">Resume Analysis</div>
-              <div className="card-content">
-                <div className="score-circle">92</div>
-                <p>Overall Score</p>
+        
+        <div className="hero-visual-premium">
+          <div className="mockup-window">
+            <div className="mockup-header">
+              <span className="dot dot-r"></span>
+              <span className="dot dot-y"></span>
+              <span className="dot dot-g"></span>
+            </div>
+            <div className="mockup-body">
+              <div className="mockup-sidebar">
+                <div className="skeleton-line short"></div>
+                <div className="skeleton-line"></div>
+                <div className="skeleton-line"></div>
+              </div>
+              <div className="mockup-main">
+                <div className="mockup-score-banner">
+                  <div className="score-circle-premium">92</div>
+                  <div className="score-text">
+                    <h4>Excellent Fit</h4>
+                    <p>Your document passes standard ATS checks.</p>
+                  </div>
+                </div>
+                <div className="skeleton-line title"></div>
+                <div className="skeleton-line paragraph"></div>
+                <div className="skeleton-line paragraph short"></div>
               </div>
             </div>
           </div>
@@ -100,15 +115,15 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section id="features" className="features">
-        <div className="section-header">
-          <h2>Powerful Features</h2>
-          <p>Everything you need to create a winning resume</p>
+      <section id="features" className="features-premium">
+        <div className="section-head">
+          <h2>Professional Grade Tools</h2>
+          <p>Built for ambitious professionals who demand precision.</p>
         </div>
-        <div className="features-grid">
+        <div className="features-grid-premium">
           {features.map((feature, index) => (
-            <div key={index} className="feature-card">
-              <div className="feature-icon">{feature.icon}</div>
+            <div key={index} className="feature-card-premium">
+              <div className="feature-icon-premium">{feature.icon}</div>
               <h3>{feature.title}</h3>
               <p>{feature.description}</p>
             </div>
@@ -116,87 +131,74 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section id="how-it-works" className="how-it-works">
-        <div className="section-header">
-          <h2>How It Works</h2>
-          <p>Simple, fast, and effective resume optimization</p>
+      {/* Workflow Section */}
+      <section id="workflow" className="workflow-premium">
+        <div className="section-head">
+          <h2>Streamlined Process</h2>
+          <p>From upload to optimization in under 60 seconds.</p>
         </div>
-        <div className="steps-grid">
+        <div className="workflow-grid">
           {steps.map((step, index) => (
-            <div key={index} className="step-card">
-              <div className="step-number">{step.number}</div>
+            <div key={index} className="workflow-step">
+              <div className="step-indicator">{step.number}</div>
               <h3>{step.title}</h3>
               <p>{step.description}</p>
-              {index < steps.length - 1 && <div className="step-arrow">→</div>}
             </div>
           ))}
         </div>
       </section>
 
       {/* CTA Section */}
-      <section id="pricing" className="cta-section">
-        <div className="cta-content">
-          <h2>Ready to Optimize Your Resume?</h2>
-          <p>Join thousands of job seekers who've improved their resumes with AI analysis.</p>
-          <div className="cta-features">
-            <div className="cta-feature">
-              <FiCheck /> First analysis FREE
-            </div>
-            <div className="cta-feature">
-              <FiCheck /> No credit card required
-            </div>
-            <div className="cta-feature">
-              <FiCheck /> Instant results
-            </div>
-          </div>
-          <button className="btn-primary-large" onClick={() => navigate('/register')}>Start Your Free Analysis</button>
+      <section className="cta-premium">
+        <div className="cta-box">
+          <h2>Elevate your career trajectory today.</h2>
+          <p>Join thousands of professionals landing roles at top-tier companies.</p>
+          <ul className="cta-benefits">
+            <li><FiCheck /> No credit card required</li>
+            <li><FiCheck /> Instant comprehensive report</li>
+            <li><FiCheck /> Privacy guaranteed</li>
+          </ul>
+          <button className="btn-solid-light" onClick={() => navigate('/register')}>
+            Create Free Account
+          </button>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="footer">
-        <div className="footer-content">
-          <div className="footer-section">
+      <footer className="footer-premium">
+        <div className="footer-layout">
+          <div className="footer-brand">
             <h4>ResumeAI</h4>
-            <p>Optimize your resume with AI-powered insights.</p>
-            <div className="social-icons">
+            <p>Elevating professional narratives through data-driven analysis.</p>
+            <div className="social-links">
               <FiLinkedin />
               <FiTwitter />
               <FiGithub />
             </div>
           </div>
-
-          <div className="footer-section">
-            <h4>Product</h4>
-            <ul>
-              <li><a href="#features">Features</a></li>
-              <li><a href="#how-it-works">How It Works</a></li>
-              <li><a href="#pricing">Pricing</a></li>
-            </ul>
-          </div>
-
-          <div className="footer-section">
-            <h4>Company</h4>
-            <ul>
-              <li><a href="/">About</a></li>
-              <li><a href="/">Blog</a></li>
-              <li><a href="/">Contact</a></li>
-            </ul>
-          </div>
-
-          <div className="footer-section">
-            <h4>Legal</h4>
-            <ul>
-              <li><a href="/">Privacy Policy</a></li>
-              <li><a href="/">Terms of Service</a></li>
-            </ul>
+          
+          <div className="footer-links">
+            <div className="link-group">
+              <h5>Platform</h5>
+              <a href="#features">Features</a>
+              <a href="#workflow">How it Works</a>
+              <a href="#">Pricing</a>
+            </div>
+            <div className="link-group">
+              <h5>Company</h5>
+              <a href="#">About Us</a>
+              <a href="#">Careers</a>
+              <a href="#">Contact</a>
+            </div>
+            <div className="link-group">
+              <h5>Legal</h5>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+            </div>
           </div>
         </div>
-
-        <div className="footer-bottom">
-          <p>&copy; 2024 ResumeAI. All rights reserved.</p>
-          <p>Made with ❤️ by the ResumeAI team</p>
+        <div className="footer-copyright">
+          <p>&copy; {new Date().getFullYear()} ResumeAI. All rights reserved.</p>
         </div>
       </footer>
     </div>
