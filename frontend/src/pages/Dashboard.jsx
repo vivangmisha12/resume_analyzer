@@ -36,7 +36,7 @@ export default function Dashboard() {
 
   const fetchHistory = async () => {
     try {
-      const response = await fetch(`http://localhost:5275/api/resumes/history/${user.id}`)
+      const response = await fetch(`https://resume-analyzer-xgye.onrender.com/api/resumes/history/${user.id}`)
       if (!response.ok) throw new Error('Failed to fetch history')
       const data = await response.json()
       
@@ -55,7 +55,7 @@ export default function Dashboard() {
     if (!window.confirm("Are you sure you want to delete this resume?")) return
 
     try {
-      const response = await fetch(`http://localhost:5275/api/resumes/${id}`, {
+      const response = await fetch(`https://resume-analyzer-xgye.onrender.com/api/resumes/${id}`, {
         method: 'DELETE'
       })
       if (!response.ok) throw new Error('Failed to delete')

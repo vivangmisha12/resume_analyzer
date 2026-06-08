@@ -19,7 +19,7 @@ export default function History() {
       return
     }
     
-    fetch(`http://localhost:5275/api/resumes/history/${user.id}`)
+    fetch(`https://resume-analyzer-xgye.onrender.com/api/resumes/history/${user.id}`)
       .then(res => res.json())
       .then(data => {
         const mappedData = data.map(item => ({
@@ -44,7 +44,7 @@ export default function History() {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this resume report from your history?")) {
       try {
-        const res = await fetch(`http://localhost:5275/api/resumes/${id}`, { method: 'DELETE' })
+        const res = await fetch(`https://resume-analyzer-xgye.onrender.com/api/resumes/${id}`, { method: 'DELETE' })
         if (res.ok) {
           setAnalyses(analyses.filter(item => item.id !== id))
         } else {

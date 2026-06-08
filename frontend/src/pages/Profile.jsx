@@ -38,7 +38,7 @@ export default function Profile() {
       return
     }
 
-    fetch(`http://localhost:5275/api/resumes/history/${user.id}`)
+    fetch(`https://resume-analyzer-xgye.onrender.com/api/resumes/history/${user.id}`)
       .then(res => {
         if (!res.ok) throw new Error('Failed to fetch history')
         return res.json()

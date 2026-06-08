@@ -114,7 +114,7 @@ export default function UploadResume() {
       } else if (jdMode === 'text') {
         formData.append('jdText', jdText)
       }
-      const response = await fetch('http://localhost:5275/api/resumes/analyze', {
+      const response = await fetch('https://resume-analyzer-xgye.onrender.com/api/resumes/analyze', {
         method: 'POST',
         body: formData,
       })

@@ -24,7 +24,7 @@ export default function Register() {
 
     setLoading(true)
     try {
-      const response = await fetch('http://localhost:5275/api/auth/register', {
+      const response = await fetch('https://resume-analyzer-xgye.onrender.com/api/auth/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
