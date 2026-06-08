@@ -1,0 +1,432 @@
+/* Premium Upload Resume page styles */
+
+.upload-container {
+  padding: var(--spacing-xl);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.upload-page-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.upload-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.upload-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.upload-layout-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--spacing-xl);
+}
+
+@media (max-width: 1024px) {
+  .upload-layout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.upload-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.card-section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.card-section-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Drag Drop Zone */
+.drag-drop-zone {
+  border: 2px dashed var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-primary);
+  transition: all var(--transition-base);
+  cursor: pointer;
+}
+
+.drag-drop-zone.active {
+  border-color: var(--primary-accent);
+  background-color: rgba(124, 58, 237, 0.02);
+}
+
+.drag-drop-zone.has-file {
+  border-style: solid;
+  border-color: var(--border-color);
+  background-color: var(--card-bg);
+}
+
+.upload-cloud-icon {
+  color: var(--text-tertiary);
+  margin-bottom: var(--spacing-md);
+  transition: color var(--transition-fast);
+}
+
+.drag-drop-zone:hover .upload-cloud-icon {
+  color: var(--primary-accent);
+}
+
+.upload-prompt {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.upload-subtext {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.divider-or {
+  width: 100%;
+  max-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: var(--spacing-md) 0;
+  position: relative;
+}
+
+.divider-or::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--border-color);
+  z-index: 1;
+}
+
+.divider-or span {
+  background-color: var(--bg-primary);
+  padding: 0 var(--spacing-md);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-tertiary);
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+.drag-drop-zone.has-file .divider-or span {
+  background-color: var(--card-bg);
+}
+
+.browse-btn {
+  padding: var(--spacing-sm) var(--spacing-xl);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Upload Success States */
+.upload-success-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.success-check-icon {
+  color: var(--success);
+  margin-bottom: var(--spacing-md);
+  animation: scaleIn 0.3s ease-out;
+}
+
+.success-prompt {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
+}
+
+.uploaded-file-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  width: 100%;
+  max-width: 420px;
+  padding: var(--spacing-md);
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  text-align: left;
+}
+
+.doc-icon {
+  color: var(--primary-accent);
+}
+
+.uploaded-meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.uploaded-filename {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+}
+
+.uploaded-details {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.remove-file-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.remove-file-btn:hover {
+  background-color: rgba(239, 68, 68, 0.08);
+  color: var(--danger);
+}
+
+/* Job Description */
+.job-description-textarea {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  background-color: var(--card-bg);
+  resize: vertical;
+  transition: all var(--transition-fast);
+}
+
+.job-description-textarea:focus {
+  outline: none;
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.08);
+}
+
+.word-count-badge {
+  text-align: right;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-top: var(--spacing-sm);
+}
+
+/* Predictive Score Card */
+.highlight-card {
+  border-left: 4px solid var(--primary-accent);
+}
+
+.predict-widget-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.predict-icon-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background-color: rgba(124, 58, 237, 0.08);
+  color: var(--primary-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.predict-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.predict-subtitle {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.predict-score-display {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: var(--spacing-lg);
+}
+
+.score-value-block {
+  display: flex;
+  align-items: flex-end;
+  line-height: 1;
+}
+
+.score-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.score-total {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.score-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+  line-height: 1.4;
+}
+
+.prediction-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.predict-detail-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+.detail-label {
+  color: var(--text-secondary);
+}
+
+.detail-value {
+  color: var(--text-primary);
+}
+
+/* Parser Console widget */
+.terminal-card {
+  background-color: #0B0F19; /* Deep terminal black */
+  border-color: #1E293B;
+  color: #E2E8F0;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 0.75rem;
+  color: #94A3B8;
+  border-bottom: 1px solid #1E293B;
+  padding-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  position: relative;
+}
+
+.terminal-dots {
+  position: absolute;
+  right: 0;
+  display: flex;
+  gap: 6px;
+}
+
+.terminal-dots span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.terminal-dots span:nth-child(1) { background-color: #EF4444; }
+.terminal-dots span:nth-child(2) { background-color: #F59E0B; }
+.terminal-dots span:nth-child(3) { background-color: #10B981; }
+
+.terminal-console {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  max-height: 140px;
+  overflow-y: auto;
+}
+
+.console-line {
+  margin: 0;
+}
+
+.console-cyan { color: #38BDF8; }
+.console-green { color: #4ADE80; }
+.console-purple { color: #C084FC; }
+.console-yellow { color: #FBBF24; }
+
+/* Action Buttons */
+.action-button-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+}
+
+.cancel-btn {
+  padding: 0 var(--spacing-xl);
+  height: 46px;
+}
+
+.analyze-action-btn {
+  padding: 0 var(--spacing-xl);
+  height: 46px;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-weight: 600;
+}
+
+.spin-icon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

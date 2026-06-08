@@ -1,0 +1,451 @@
+/* Premium Enterprise ATS Report Styles */
+
+:root {
+  --primary-accent: #7C3AED; /* Purple */
+  --secondary-accent: #A855F7;
+  --bg-main: #F3F4F6;
+  --card-bg: #FFFFFF;
+  --text-main: #1F2937;
+  --text-muted: #6B7280;
+  --border-light: #E5E7EB;
+  
+  --success: #10B981;
+  --success-bg: #D1FAE5;
+  --warning: #F59E0B;
+  --warning-bg: #FEF3C7;
+  --danger: #EF4444;
+  --danger-bg: #FEE2E2;
+  --orange: #F97316;
+  --orange-bg: #FFEDD5;
+
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.05), 0 10px 15px rgba(0,0,0,0.02);
+  --radius-lg: 12px;
+  --radius-md: 8px;
+}
+
+.premium-dashboard {
+  background-color: var(--bg-main);
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text-main);
+}
+
+.glass-panel {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: transform 0.2s ease;
+}
+
+/* 1. HEADER */
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.header-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.report-title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem 0;
+  color: var(--text-main);
+}
+
+.report-meta {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.meta-divider {
+  color: var(--border-light);
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-primary, .btn-secondary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-accent);
+  color: white;
+  box-shadow: 0 4px 6px rgba(124, 58, 237, 0.2);
+}
+
+.btn-secondary {
+  background-color: white;
+  color: var(--text-main);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+/* GRID LAYOUT */
+.dashboard-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.dashboard-section {
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 0.5rem;
+}
+
+/* 12. EXEC SUMMARY */
+.exec-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-accent);
+}
+
+.exec-card p {
+  color: var(--text-main);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* 2. ATS SCORE OVERVIEW */
+.score-card {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.score-gauge-container {
+  width: 140px;
+  height: 140px;
+}
+
+.circular-chart {
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
+  max-height: 250px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.circle-fill {
+  fill: none;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  animation: progress 1s ease-out forwards;
+}
+
+@keyframes progress {
+  0% { stroke-dasharray: 0 100; }
+}
+
+.percentage {
+  fill: var(--text-main);
+  font-family: sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle;
+  font-weight: bold;
+}
+
+.status-excellent { stroke: var(--success); color: var(--success); background: var(--success-bg); }
+.status-good { stroke: var(--warning); color: var(--warning); background: var(--warning-bg); }
+.status-needs-improvement { stroke: var(--orange); color: var(--orange); background: var(--orange-bg); }
+.status-poor { stroke: var(--danger); color: var(--danger); background: var(--danger-bg); }
+
+.score-details h2 {
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.score-details p {
+  margin: 0 0 1rem 0;
+  color: var(--text-muted);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* 3. BREAKDOWN */
+.progress-group {
+  margin-bottom: 1rem;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.progress-bar {
+  background-color: var(--border-light);
+  border-radius: 4px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-accent), var(--secondary-accent));
+  border-radius: 4px;
+}
+
+/* 11. QUALITY CHECK */
+.quality-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.quality-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.quality-list li.present { color: var(--success); }
+.quality-list li.missing { color: var(--danger); }
+
+/* 4. JD SUMMARY */
+.total-kw {
+  font-weight: 600;
+  color: var(--primary-accent);
+  margin-bottom: 1rem;
+}
+
+.jd-skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.jd-skills-grid h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.jd-list {
+  padding-left: 1.2rem;
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-main);
+}
+
+.empty-li {
+  list-style: none;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-left: -1.2rem;
+}
+
+/* 5 & 6. SKILLS CHIPS */
+.skills-block {
+  margin-bottom: 1.5rem;
+}
+
+.skills-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.skills-header h4 { margin: 0; }
+
+.count-badge {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.count-badge.green { background: var(--success-bg); color: var(--success); }
+.count-badge.red { background: var(--danger-bg); color: var(--danger); }
+
+.chips-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+
+.chip-green { background: var(--success-bg); color: var(--success); border-color: rgba(16,185,129,0.2); }
+.chip-red { background: var(--danger-bg); color: var(--danger); border-color: rgba(239,68,68,0.2); }
+
+.empty-msg {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.mt-lg { margin-top: 1.5rem; }
+
+/* 7, 8, 9, 10. AI INSIGHT CARDS */
+.cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.insight-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  border-left: 4px solid transparent;
+}
+
+.insight-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-main);
+}
+
+.insight-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.success-card { background: var(--success-bg); border-left-color: var(--success); }
+.success-card .insight-icon { color: var(--success); }
+
+.warning-card { background: var(--danger-bg); border-left-color: var(--danger); }
+.warning-card .insight-icon { color: var(--danger); }
+
+.purple-card { background: #F3E8FF; border-left-color: var(--primary-accent); }
+.card-bullet { width: 8px; height: 8px; background: var(--primary-accent); border-radius: 50%; margin-top: 6px; flex-shrink: 0; }
+
+.default-card { background: #E0E7FF; border-left-color: #4F46E5; }
+.default-card .insight-icon { color: #4F46E5; }
+
+/* Text colors */
+.text-success { color: var(--success) !important; border-bottom-color: var(--success-bg) !important; }
+.text-warning { color: var(--danger) !important; border-bottom-color: var(--danger-bg) !important; }
+.text-purple { color: var(--primary-accent) !important; border-bottom-color: #F3E8FF !important; }
+
+@media print {
+  .back-btn, .header-actions { display: none; }
+  .premium-dashboard { background: white; padding: 0; }
+  .glass-panel { border: 1px solid #ddd; box-shadow: none; break-inside: avoid; margin-bottom: 1rem; }
+}
+
+@media (max-width: 1024px) {
+  .dashboard-grid-2col {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .score-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Print Styles */
+@media print {
+  body {
+    background: white;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  /* Hide sidebar and navbar during print if they exist in DOM */
+  .sidebar, .navbar, .header-actions {
+    display: none !important;
+  }
+
+  .premium-dashboard {
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    background: white;
+  }
+
+  .glass-panel {
+    border: none;
+    box-shadow: none;
+    break-inside: avoid;
+    margin-bottom: 2rem;
+  }
+
+  /* Adjust grid for print */
+  .overview-grid {
+    grid-template-columns: 1fr 2fr;
+  }
+}

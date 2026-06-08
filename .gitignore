@@ -1,0 +1,18 @@
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+
+# Backend
+backend/**/bin/
+backend/**/obj/
+backend/**/appsettings.json
+backend/**/appsettings.Development.json
+backend/resume.db
+backend/resume.db-shm
+backend/resume.db-wal
+
+# OS generated files
+.DS_Store
+Thumbs.db

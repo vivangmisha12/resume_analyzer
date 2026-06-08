@@ -1,0 +1,44 @@
+[
+  {
+    "id": "ats-classic",
+    "name": "ATS Classic",
+    "category": "ATS Friendly",
+    "image": "/templates/ATS Compatible Resume.jpg"
+  },
+  {
+    "id": "ats-modern",
+    "name": "ATS Modern",
+    "category": "ATS Friendly",
+    "image": "/templates/ATS Friendly Professional Resume.jpg"
+  },
+  {
+    "id": "ats-Professional",
+    "name": "ATS Professional",
+    "category": "ATS Friendly",
+    "image": "/templates/ATS Resume That Gets You Hired _ Free Review.jpg"
+  },
+  {
+    "id": "full-stack-dev",
+    "name": "Full Stack Developer / Software Engineer",
+    "category": "Software Developer",
+    "image": "/templates/Software Engineer ATS-Friendly Resume Template _ Professional CV for Google Docs, Word, Pages.jpg"
+  },
+  {
+    "id": "java-dev",
+    "name": "Java Developer",
+    "category": "Software Developer",
+    "image": "/templates/Java Developer Resume Example Template & Writing Tips.jpg"
+  },
+  {
+    "id": "corporate-pro",
+    "name": "Corporate Professional",
+    "category": "Professional",
+    "image": "/templates/Simple Modern Resume CV Template Design For Interview Word _ DOC Template Free D resume simple desig.jpg"
+  },
+  {
+    "id": "creative-designer",
+    "name": "Creative Designer",
+    "category": "Creative",
+    "image": "/templates/Simple professional cv and resume template – Free Vector _ VectorStock.jpg"
+  }
+]

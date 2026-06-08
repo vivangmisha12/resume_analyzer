@@ -1,0 +1,310 @@
+/* Premium Resume History Styles */
+
+.history-container {
+  padding: var(--spacing-xl);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.history-page-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.history-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.history-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Filter Board */
+.history-filter-board {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md) var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 768px) {
+  .history-filter-board {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.history-search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.history-search-input-wrapper input {
+  padding-left: 40px;
+  width: 100%;
+  height: 40px;
+  border-radius: var(--radius-md);
+}
+
+.search-field-icon {
+  position: absolute;
+  left: 14px;
+  color: var(--text-secondary);
+  pointer-events: none;
+}
+
+.history-selectors {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+@media (max-width: 480px) {
+  .history-selectors {
+    flex-direction: column;
+  }
+}
+
+.selector-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.selector-group select {
+  padding-left: 36px;
+  padding-right: var(--spacing-xl);
+  height: 40px;
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-weight: 600;
+  appearance: none;
+  cursor: pointer;
+}
+
+.selector-field-icon {
+  position: absolute;
+  left: 14px;
+  color: var(--text-secondary);
+  pointer-events: none;
+}
+
+.filtered-results-count {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* History Cards Grid */
+.history-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.history-doc-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-base);
+}
+
+.history-doc-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(124, 58, 237, 0.2);
+  transform: translateY(-2px);
+}
+
+.doc-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.doc-type-icon-wrapper {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background-color: rgba(124, 58, 237, 0.08);
+  color: var(--primary-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.status-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.status-tag.status-success { background-color: rgba(16, 185, 129, 0.08); color: var(--success); }
+.status-tag.status-warning { background-color: rgba(245, 158, 11, 0.08); color: var(--warning); }
+.status-tag.status-danger { background-color: rgba(239, 68, 68, 0.08); color: var(--danger); }
+
+.doc-card-body {
+  margin-bottom: var(--spacing-md);
+}
+
+.doc-card-filename {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.doc-card-position {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+}
+
+.doc-card-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+.meta-dot {
+  font-weight: 700;
+}
+
+/* Score display widget */
+.doc-card-score-row {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-md) 0;
+  border-top: 1px dashed var(--border-color);
+  border-bottom: 1px dashed var(--border-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.score-badge-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+}
+
+.score-badge-num {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.score-badge-lbl {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+.history-doc-card.score-excellent .score-badge-circle { border-color: var(--success); background-color: rgba(16, 185, 129, 0.02); }
+.history-doc-card.score-good .score-badge-circle { border-color: var(--primary-accent); background-color: rgba(124, 58, 237, 0.02); }
+.history-doc-card.score-fair .score-badge-circle { border-color: var(--warning); background-color: rgba(245, 158, 11, 0.02); }
+.history-doc-card.score-poor .score-badge-circle { border-color: var(--danger); background-color: rgba(239, 68, 68, 0.02); }
+
+/* Card actions button group */
+.doc-card-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.action-pill-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 32px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.action-pill-btn:hover {
+  background-color: var(--bg-primary);
+}
+
+.action-pill-btn.view-btn {
+  flex: 1.2;
+}
+
+.action-pill-btn.download-btn {
+  flex: 1.2;
+}
+
+.action-pill-btn.delete-btn {
+  flex: 0.6;
+  color: var(--text-secondary);
+}
+
+.action-pill-btn.delete-btn:hover {
+  background-color: rgba(239, 68, 68, 0.08);
+  border-color: rgba(239, 68, 68, 0.2);
+  color: var(--danger);
+}
+
+/* Empty State */
+.history-empty-state {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.empty-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.empty-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.empty-subtitle {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}

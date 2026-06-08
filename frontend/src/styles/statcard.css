@@ -1,0 +1,77 @@
+.stat-card {
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.stat-content {
+  flex: 1;
+}
+
+.stat-title {
+  font-size: 0.9rem;
+  color: var(--gray-color);
+  margin: 0 0 5px 0;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--dark-color);
+}
+
+.stat-primary {
+  border-left: 4px solid var(--primary-color);
+}
+
+.stat-primary .stat-icon {
+  color: var(--primary-color);
+}
+
+.stat-secondary {
+  border-left: 4px solid var(--secondary-color);
+}
+
+.stat-secondary .stat-icon {
+  color: var(--secondary-color);
+}
+
+.stat-success {
+  border-left: 4px solid var(--success-color);
+}
+
+.stat-success .stat-icon {
+  color: var(--success-color);
+}
+
+.stat-danger {
+  border-left: 4px solid var(--danger-color);
+}
+
+.stat-danger .stat-icon {
+  color: var(--danger-color);
+}
+
+.stat-warning {
+  border-left: 4px solid var(--warning-color);
+}
+
+.stat-warning .stat-icon {
+  color: var(--warning-color);
+}
